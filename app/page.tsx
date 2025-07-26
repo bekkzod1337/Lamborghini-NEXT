@@ -21,33 +21,41 @@ export default function HomePage() {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const images = Array.from(document.images);
+    const images = Array.from(document.querySelectorAll('img'));
+    const total = images.length;
     let loaded = 0;
 
-    const updateProgress = () => {
-      loaded++;
-      const percentage = Math.round((loaded / images.length) * 100);
-      setProgress(percentage);
-      if (percentage >= 100) {
-        setTimeout(() => {
-          setIsLoaded(true);
-        }, 800); // delay for smoothness
-      }
-    };
-
-    if (images.length === 0) {
+    if (total === 0) {
       setProgress(100);
       setIsLoaded(true);
-    } else {
-      images.forEach((img) => {
+      return;
+    }
+
+    const loadImage = (img: HTMLImageElement) =>
+      new Promise<void>((resolve) => {
         if (img.complete) {
-          updateProgress();
+          loaded++;
+          setProgress(Math.round((loaded / total) * 100));
+          resolve();
         } else {
-          img.addEventListener('load', updateProgress);
-          img.addEventListener('error', updateProgress);
+          img.onload = () => {
+            loaded++;
+            setProgress(Math.round((loaded / total) * 100));
+            resolve();
+          };
+          img.onerror = () => {
+            loaded++;
+            setProgress(Math.round((loaded / total) * 100));
+            resolve();
+          };
         }
       });
-    }
+
+    Promise.all(images.map((img) => loadImage(img))).then(() => {
+      setTimeout(() => {
+        setIsLoaded(true);
+      }, 800); // Silliqlik uchun
+    });
   }, []);
 
   return (
