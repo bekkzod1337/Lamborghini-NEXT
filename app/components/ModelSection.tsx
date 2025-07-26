@@ -14,37 +14,48 @@ const models = [
 
 export default function ModelsSection() {
   return (
-    <section id="models" className="bg-black py-20 px-6 md:px-12">
-      <div className="text-center mb-12">
-        <h2 className="text-yellow-400 text-4xl md:text-5xl font-lamborghini uppercase tracking-widest">
+    <section id="models" className="bg-black py-24 px-6 md:px-12">
+      <div className="text-center mb-16">
+        <h2 className="text-yellow-400 text-4xl md:text-5xl font-lamborghini uppercase tracking-[0.2em]">
           Our Models
         </h2>
         <p className="text-white text-base md:text-lg mt-4 max-w-2xl mx-auto">
-          Discover the iconic lineup of Lamborghini, blending raw performance with cutting-edge design and legendary craftsmanship.
+          Discover the iconic lineup of Lamborghini—where aggressive power meets Italian precision and luxury.
         </p>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
         {models.map((model, i) => (
           <motion.div
             key={model.name}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.15, duration: 0.7 }}
-            className="relative group overflow-hidden rounded-2xl border border-yellow-500/30 hover:scale-105 transition-transform duration-500 shadow-xl"
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.1, duration: 0.8 }}
+            className="relative group overflow-hidden rounded-2xl border border-yellow-500/30 shadow-lg hover:shadow-yellow-500/30 transition duration-500"
           >
             <Image
               src={model.img}
-              alt={model.name}
+              alt={`Lamborghini ${model.name}`}
               width={500}
-              height={300}
-              className="w-full h-64 object-cover"
+              height={320}
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-            <div className="absolute bottom-0 left-0 w-full p-4">
-              <h3 className="text-white text-lg md:text-xl font-semibold tracking-wide drop-shadow-md">
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
+            
+            {/* Model Name */}
+            <div className="absolute bottom-0 left-0 w-full p-4 z-20">
+              <h3 className="text-white text-xl font-semibold tracking-wide drop-shadow-lg">
                 {model.name}
               </h3>
+            </div>
+
+            {/* Hover Text */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30">
+              <p className="bg-black/70 text-yellow-400 px-4 py-2 rounded-full text-sm uppercase tracking-wider shadow-md">
+                Learn More
+              </p>
             </div>
           </motion.div>
         ))}

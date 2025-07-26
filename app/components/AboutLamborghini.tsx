@@ -1,34 +1,38 @@
-'use client'
+'use client';
 
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
 const AboutLamborghini = () => {
   return (
-    <section className="bg-black py-16 px-4 md:px-20">
+    <section className="bg-black py-24 px-6 md:px-20">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="max-w-5xl mx-auto text-center"
+        viewport={{ once: true }}
+        className="max-w-4xl mx-auto text-center"
       >
-        <h2 className="text-yellow-400 text-3xl md:text-4xl font-bold mb-6">
-          About Lamborghini Aventador
+        <h2 className="text-yellow-400 text-4xl md:text-5xl font-lamborghini tracking-widest uppercase mb-4">
+          About Aventador
         </h2>
-        <p className="text-white text-base md:text-lg leading-relaxed">
-          The Lamborghini Aventador is an iconic supercar known for its sharp design, roaring V12 engine, and aggressive performance. 
-          First introduced in 2011, it quickly became a symbol of prestige and raw power in the automotive world. 
-          With its carbon fiber monocoque, scissor doors, and cutting-edge aerodynamics, the Aventador represents the pinnacle of Italian automotive engineering.
+        <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8 rounded-full" />
+
+        <p className="text-white/80 text-base md:text-lg leading-relaxed">
+          The <span className="text-white font-semibold">Lamborghini Aventador</span> is a legendary supercar celebrated for its futuristic design and unmistakable V12 engine growl. 
+          Since its debut in 2011, it has stood as a symbol of <span className="text-yellow-400">extreme performance</span>, <span className="text-yellow-400">cutting-edge technology</span>, and unmistakable Italian flair.
         </p>
-        <p className="text-white text-base md:text-lg mt-4 leading-relaxed">
-          Powered by a naturally aspirated 6.5-liter V12 engine, it produces up to 769 horsepower and can accelerate from 0 to 100 km/h in just 2.8 seconds. 
-          It also features an advanced all-wheel-drive system, a 7-speed ISR transmission, and pushrod suspension to deliver precise handling at high speeds.
+
+        <p className="text-white/80 text-base md:text-lg mt-6 leading-relaxed">
+          With a <span className="font-semibold">6.5-liter naturally aspirated V12</span> producing up to <span className="font-semibold text-white">769 HP</span>, the Aventador accelerates from 0 to 100 km/h in just <span className="font-semibold text-white">2.8 seconds</span>. 
+          Its carbon fiber monocoque chassis, all-wheel-drive system, and pushrod suspension ensure every drive feels like a race.
         </p>
-        <p className="text-white text-base md:text-lg mt-4 leading-relaxed">
-          The Aventador is not just a car; it’s a piece of art and innovation, crafted for those who seek exclusivity, performance, and unmatched road presence.
+
+        <p className="text-white/80 text-base md:text-lg mt-6 leading-relaxed">
+          More than just a machine, the Aventador is a statement — a piece of automotive art for those who crave <span className="text-yellow-400 font-medium">raw power</span>, <span className="text-yellow-400 font-medium">exclusivity</span>, and unmatched <span className="text-yellow-400 font-medium">road presence</span>.
         </p>
       </motion.div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutLamborghini
+export default AboutLamborghini;
