@@ -48,32 +48,32 @@ export default function CustomizePage() {
   const [selectedInterior, setSelectedInterior] = useState(interiorOptions[0])
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-black via-neutral-900 to-black text-white">
+    <div className="relative min-h-screen bg-gradient-to-br from-neutral-900 via-black to-neutral-950 text-white">
       <Header />
 
-      <main className="px-4 pt-32 pb-20"> {/* Headerni bosib ketmasligi uchun pt-32 */}
-        <h1 className="text-5xl font-bold text-center mb-12 tracking-tight animate-fade-in-up">
+      <main className="px-6 pt-32 pb-24">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-center mb-14 tracking-tight">
           Customize Your Lamborghini
         </h1>
 
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-10">
           {/* Car Preview */}
-          <div className="relative w-full h-[320px] xl:h-[400px] bg-neutral-800 rounded-2xl shadow-xl overflow-hidden animate-fade-in">
+          <div className="relative w-full h-[320px] xl:h-[400px] bg-neutral-800 rounded-3xl shadow-2xl overflow-hidden border border-neutral-700">
             <Image
               src={selectedColor.image}
               alt={`Car color: ${selectedColor.name}`}
               fill
               className="object-cover"
               placeholder="blur"
-              blurDataURL="/loading.png" // Fallback loading image
+              blurDataURL="/loading.png"
               priority
             />
-            <div className="absolute bottom-5 right-5 w-20 h-20 xl:w-24 xl:h-24">
+            <div className="absolute bottom-4 right-4 w-20 h-20 xl:w-24 xl:h-24 rounded-full overflow-hidden ring-2 ring-yellow-400 shadow-lg">
               <Image
                 src={selectedWheel.image}
                 alt={`Wheel: ${selectedWheel.name}`}
                 fill
-                className="object-cover opacity-90"
+                className="object-cover"
                 placeholder="blur"
                 blurDataURL="/loading.png"
               />
@@ -81,7 +81,7 @@ export default function CustomizePage() {
           </div>
 
           {/* Interior Preview */}
-          <div className="relative w-full h-[320px] xl:h-[400px] bg-neutral-800 rounded-2xl shadow-xl overflow-hidden animate-fade-in delay-100">
+          <div className="relative w-full h-[320px] xl:h-[400px] bg-neutral-800 rounded-3xl shadow-2xl overflow-hidden border border-neutral-700">
             <Image
               src={selectedInterior.image}
               alt={`Interior: ${selectedInterior.name}`}
@@ -93,20 +93,20 @@ export default function CustomizePage() {
           </div>
 
           {/* Controls */}
-          <div className="space-y-10 animate-fade-in delay-200">
+          <div className="space-y-10">
             {/* Exterior Color Picker */}
             <div>
-              <h2 className="text-xl font-semibold mb-3">Exterior Color</h2>
+              <h2 className="text-xl font-semibold mb-4">Exterior Color</h2>
               <div className="flex flex-wrap gap-3">
                 {carColors.map((color) => (
                   <button
                     key={color.name}
                     onClick={() => setSelectedColor(color)}
                     className={clsx(
-                      'w-10 h-10 rounded-full border-2 transition-all',
+                      'w-10 h-10 rounded-full border-2 transition-all duration-200',
                       selectedColor.name === color.name
                         ? 'ring-4 ring-yellow-500 scale-110'
-                        : 'border-white hover:scale-105'
+                        : 'border-white hover:scale-105 hover:ring-2 hover:ring-yellow-300'
                     )}
                     style={{ backgroundColor: color.value }}
                   />
@@ -116,17 +116,17 @@ export default function CustomizePage() {
 
             {/* Wheel Picker */}
             <div>
-              <h2 className="text-xl font-semibold mb-3">Select Wheels</h2>
+              <h2 className="text-xl font-semibold mb-4">Wheel Style</h2>
               <div className="flex flex-wrap gap-3">
                 {wheelOptions.map((wheel) => (
                   <div
                     key={wheel.id}
                     onClick={() => setSelectedWheel(wheel)}
                     className={clsx(
-                      'p-1 border-2 rounded-xl cursor-pointer hover:scale-105 transition-all',
+                      'p-1 rounded-xl cursor-pointer transition-all duration-200 border-2',
                       selectedWheel.id === wheel.id
-                        ? 'border-yellow-500'
-                        : 'border-white'
+                        ? 'border-yellow-500 scale-105 shadow-lg'
+                        : 'border-white hover:scale-105 hover:border-yellow-300'
                     )}
                   >
                     <Image
@@ -134,7 +134,7 @@ export default function CustomizePage() {
                       alt={wheel.name}
                       width={64}
                       height={64}
-                      className="rounded-lg"
+                      className="rounded-md"
                       placeholder="blur"
                       blurDataURL="/loading.png"
                     />
@@ -145,17 +145,17 @@ export default function CustomizePage() {
 
             {/* Interior Picker */}
             <div>
-              <h2 className="text-xl font-semibold mb-3">Interior Style</h2>
+              <h2 className="text-xl font-semibold mb-4">Interior</h2>
               <div className="flex flex-wrap gap-3">
                 {interiorOptions.map((interior) => (
                   <div
                     key={interior.id}
                     onClick={() => setSelectedInterior(interior)}
                     className={clsx(
-                      'p-1 border-2 rounded-xl cursor-pointer hover:scale-105 transition-all',
+                      'p-1 rounded-xl cursor-pointer transition-all duration-200 border-2',
                       selectedInterior.id === interior.id
-                        ? 'border-yellow-500'
-                        : 'border-white'
+                        ? 'border-yellow-500 scale-105 shadow-lg'
+                        : 'border-white hover:scale-105 hover:border-yellow-300'
                     )}
                   >
                     <Image
@@ -163,7 +163,7 @@ export default function CustomizePage() {
                       alt={interior.name}
                       width={64}
                       height={64}
-                      className="rounded-lg"
+                      className="rounded-md"
                       placeholder="blur"
                       blurDataURL="/loading.png"
                     />
@@ -175,7 +175,7 @@ export default function CustomizePage() {
         </div>
 
         {/* Summary */}
-        <div className="mt-16 text-center text-lg tracking-wide space-y-1 animate-fade-in-up delay-300">
+        <div className="mt-16 text-center text-lg tracking-wide space-y-2">
           <p>
             <strong>Color:</strong>{' '}
             <span style={{ color: selectedColor.value }}>{selectedColor.name}</span>

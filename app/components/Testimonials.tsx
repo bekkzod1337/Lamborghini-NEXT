@@ -6,28 +6,31 @@ import { motion } from 'framer-motion';
 
 const testimonials = [
   {
-    name: 'Emily Smith',
-    role: 'Coffee Enthusiast',
-    quote: 'The best coffee in town! Elza Coffee has completely changed my mornings.',
+    name: 'Alex Thompson',
+    role: 'Supercar Collector',
+    quote:
+      'Owning a Lamborghini has been a lifelong dream. The design, the power, the emotion — nothing compares.',
     avatar: '/customers/1.jpg',
   },
   {
-    name: 'John Doe',
-    role: 'Cafe Owner',
-    quote: 'Exceptional service and premium beans. I always recommend Elza Coffee.',
+    name: 'Natalie Ruiz',
+    role: 'Luxury Lifestyle Blogger',
+    quote:
+      'Lamborghini is more than just a car brand — it’s an icon. Every ride feels like a masterpiece in motion.',
     avatar: '/customers/2.jpg',
   },
   {
-    name: 'Sarah Johnson',
-    role: 'Barista Champion',
-    quote: 'Rich flavors and a cozy atmosphere. A must-visit for coffee lovers!',
+    name: 'David Miller',
+    role: 'Motorsport Enthusiast',
+    quote:
+      'From the track to the street, Lamborghinis deliver unmatched performance and presence. Simply breathtaking.',
     avatar: '/customers/3.jpg',
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="py-24 bg-[#0D0D0D] text-white px-4 sm:px-6 lg:px-20">
+    <section className="py-24 bg-black text-white px-4 sm:px-6 lg:px-20">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +42,7 @@ export default function Testimonials() {
           Testimonials
         </h2>
         <p className="text-white/80 text-lg mt-3">
-          What our customers say about Elza Coffee
+          What Lamborghini owners and fans have to say
         </p>
       </motion.div>
 

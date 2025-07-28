@@ -13,22 +13,22 @@ const AboutLamborghini = () => {
         className="max-w-4xl mx-auto text-center"
       >
         <h2 className="text-yellow-400 text-4xl md:text-5xl font-lamborghini tracking-widest uppercase mb-4">
-          About Aventador
+          About Lamborghini
         </h2>
         <div className="w-20 h-1 bg-yellow-400 mx-auto mb-8 rounded-full" />
 
         <p className="text-white/80 text-base md:text-lg leading-relaxed">
-          The <span className="text-white font-semibold">Lamborghini Aventador</span> is a legendary supercar celebrated for its futuristic design and unmistakable V12 engine growl. 
-          Since its debut in 2011, it has stood as a symbol of <span className="text-yellow-400">extreme performance</span>, <span className="text-yellow-400">cutting-edge technology</span>, and unmistakable Italian flair.
+          <span className="text-white font-semibold">Automobili Lamborghini</span> — bu Italiyaning Sant’Agata Bolognese shahrida joylashgan yuqori darajadagi superkarlarga ixtisoslashgan avtomobil ishlab chiqaruvchi kompaniya. 
+          1963-yilda <span className="text-yellow-400">Ferruccio Lamborghini</span> tomonidan asos solingan brend tez orada o‘zining jasur dizayni, texnologik innovatsiyalari va yuqori samarador motori bilan mashhurlikka erishdi.
         </p>
 
         <p className="text-white/80 text-base md:text-lg mt-6 leading-relaxed">
-          With a <span className="font-semibold">6.5-liter naturally aspirated V12</span> producing up to <span className="font-semibold text-white">769 HP</span>, the Aventador accelerates from 0 to 100 km/h in just <span className="font-semibold text-white">2.8 seconds</span>. 
-          Its carbon fiber monocoque chassis, all-wheel-drive system, and pushrod suspension ensure every drive feels like a race.
+          Lamborghini modellarining o‘ziga xos xususiyatlari — <span className="text-yellow-400 font-medium">keskin chiziqlar</span>, <span className="text-yellow-400 font-medium">aerodinamik shakllar</span>, va <span className="text-yellow-400 font-medium">qudratli V10 yoki V12 dvigatellar</span> bilan uyg‘unlashgan hayratlanarli dizayndir. 
+          Har bir model — bu faqat transport vositasi emas, balki <span className="text-white font-semibold">ekstremal haydov tajribasining san’ati</span>.
         </p>
 
         <p className="text-white/80 text-base md:text-lg mt-6 leading-relaxed">
-          More than just a machine, the Aventador is a statement — a piece of automotive art for those who crave <span className="text-yellow-400 font-medium">raw power</span>, <span className="text-yellow-400 font-medium">exclusivity</span>, and unmatched <span className="text-yellow-400 font-medium">road presence</span>.
+          Bugungi kunda Lamborghini brendi faqat sport avtomobillarigina emas, balki <span className="text-yellow-400 font-medium">texnologik innovatsiyalar</span>, <span className="text-yellow-400 font-medium">elektrifikatsiya</span>, va <span className="text-yellow-400 font-medium">barqarorlik</span> sari intilayotgan zamonaviy avtomobil sanoatining yetakchilaridan biri hisoblanadi.
         </p>
       </motion.div>
     </section>

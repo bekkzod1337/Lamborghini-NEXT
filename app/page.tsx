@@ -59,7 +59,7 @@ export default function HomePage() {
   }, []);
 
   return (
-    <main className="bg-black text-white overflow-hidden">
+    <main className="bg-black text-white overflow-x-hidden">
       {!isLoaded && <LoadingScreen progress={progress} />}
       {isLoaded && (
         <>
