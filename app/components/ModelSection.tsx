@@ -17,10 +17,10 @@ export default function ModelsSection() {
     <section id="models" className="bg-black py-24 px-6 md:px-12">
       <div className="text-center mb-16">
         <h2 className="text-yellow-400 text-4xl md:text-5xl font-lamborghini uppercase tracking-[0.2em]">
-          Our Models
+          Bizning Modellar
         </h2>
         <p className="text-white text-base md:text-lg mt-4 max-w-2xl mx-auto">
-          Discover the iconic lineup of Lamborghini—where aggressive power meets Italian precision and luxury.
+          Lamborghini’ning afsonaviy modellari bilan tanishing — bu yerda shiddat, italyancha aniqlik va hashamat uyg‘unlashgan.
         </p>
       </div>
 
@@ -55,7 +55,7 @@ export default function ModelsSection() {
             {/* Hover Text */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-30">
               <span className="bg-black/70 text-yellow-400 px-4 py-2 rounded-full text-sm uppercase tracking-wider shadow-md">
-                Learn More
+                Batafsil
               </span>
             </div>
           </motion.div>

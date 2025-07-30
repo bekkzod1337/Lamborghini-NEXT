@@ -11,10 +11,10 @@ export default function Header() {
   const closeMenu = () => setIsOpen(false);
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/models', label: 'Models' },
-    { href: '/customize', label: 'Customize' },
-    { href: '/dealers', label: 'Dealers' },
+    { href: '/', label: 'Bosh sahifa' },
+    { href: '/models', label: 'Modellar' },
+    { href: '/customize', label: 'Moslashtirish' },
+    { href: '/dealers', label: 'Dilerlar' },
   ];
 
   return (

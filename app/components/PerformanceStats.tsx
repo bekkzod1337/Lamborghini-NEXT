@@ -4,18 +4,22 @@ import { Timer, GaugeCircle, Flame, Activity } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const stats = [
-  { title: '0–100 km/h', value: '2.8s', icon: Timer },
-  { title: 'Top Speed', value: '350 km/h', icon: GaugeCircle }, // 🔧 Shu yer tuzatildi
-  { title: 'Horsepower', value: '770 HP', icon: Flame },
-  { title: 'Torque', value: '720 Nm', icon: Activity },
+  { title: '0–100 km/soat', value: '2.8 soniya', icon: Timer },
+  { title: 'Eng yuqori tezlik', value: '350 km/soat', icon: GaugeCircle },
+  { title: 'Ot kuchi', value: '770 HP', icon: Flame },
+  { title: 'Aylanish momenti', value: '720 Nm', icon: Activity },
 ];
 
 export default function PerformanceStats() {
   return (
-    <section className="bg-black text-white py-24">
+    <section
+      className="bg-black text-white py-24"
+      aria-label="Lamborghini statistikasi bo‘limi"
+      role="region"
+    >
       <div className="text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-lamborghini uppercase tracking-[0.2em]">
-          Performance
+          Texnik ko‘rsatkichlar
         </h2>
         <div className="w-24 h-1 bg-yellow-400 mx-auto mt-4 rounded-full" />
       </div>
@@ -34,6 +38,7 @@ export default function PerformanceStats() {
             <Icon
               size={44}
               className="mb-4 bg-gradient-to-tr text-yellow-400 from-yellow-300 to-yellow-500 text-transparent bg-clip-text"
+              aria-hidden="true"
             />
             <h3 className="text-lg md:text-xl font-semibold text-yellow-400 mb-1">
               {title}

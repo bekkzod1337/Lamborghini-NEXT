@@ -7,23 +7,23 @@ import { motion } from 'framer-motion';
 const testimonials = [
   {
     name: 'Alex Thompson',
-    role: 'Supercar Collector',
+    role: 'Superkar kolleksioneri',
     quote:
-      'Owning a Lamborghini has been a lifelong dream. The design, the power, the emotion — nothing compares.',
+      'Lamborghini egasi bo‘lish mening orzum edi. Dizayni, qudrati, hissiyoti — hech narsa teng kela olmaydi.',
     avatar: '/customers/1.jpg',
   },
   {
     name: 'Natalie Ruiz',
-    role: 'Luxury Lifestyle Blogger',
+    role: 'Hashtag hayot tarzini yurituvchi bloger',
     quote:
-      'Lamborghini is more than just a car brand — it’s an icon. Every ride feels like a masterpiece in motion.',
+      'Lamborghini — bu oddiy avtomobil brendi emas, bu afsona. Har bir haydov hayotdagi san’at asariga o‘xshaydi.',
     avatar: '/customers/2.jpg',
   },
   {
     name: 'David Miller',
-    role: 'Motorsport Enthusiast',
+    role: 'Avtomobil sporti ishqibozi',
     quote:
-      'From the track to the street, Lamborghinis deliver unmatched performance and presence. Simply breathtaking.',
+      'Trekdan tortib ko‘cha haydagichigacha — Lamborghini’lar betakror kuch va ko‘rinishni taqdim etadi. Bu haqiqiy hayratlanarli holat.',
     avatar: '/customers/3.jpg',
   },
 ];
@@ -39,10 +39,10 @@ export default function Testimonials() {
         className="text-center mb-16"
       >
         <h2 className="text-yellow-400 text-4xl font-semibold tracking-widest uppercase">
-          Testimonials
+          Mijozlar fikri
         </h2>
         <p className="text-white/80 text-lg mt-3">
-          What Lamborghini owners and fans have to say
+          Lamborghini egalarining fikrlari bilan tanishing
         </p>
       </motion.div>
 
@@ -88,3 +88,4 @@ export default function Testimonials() {
     </section>
   );
 }
+  

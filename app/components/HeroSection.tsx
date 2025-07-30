@@ -22,10 +22,10 @@ export default function HeroSection() {
   return (
     <section
       className="relative w-full h-screen bg-black text-white overflow-hidden"
-      aria-label="Lamborghini Hero Section"
+      aria-label="Lamborghini Bosh Sahifa"
       role="region"
     >
-      {/* Background Video */}
+      {/* Fon Videosi */}
       <video
         autoPlay
         muted
@@ -34,22 +34,13 @@ export default function HeroSection() {
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
         <source src="/videos/1.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+        Brauzeringiz video tegini qo‘llab-quvvatlamaydi.
       </video>
 
-      {/* Overlay */}
+      {/* Qoraytirilgan qoplama */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/90 z-10" />
 
-      {/* Fallback Image (optional) */}
-      {/* <Image
-        src="/models-bg.png"
-        alt="Lamborghini car"
-        fill
-        className="object-cover z-0"
-        priority
-      /> */}
-
-      {/* Content */}
+      {/* Kontent */}
       <motion.div
         initial="hidden"
         animate="show"
@@ -61,7 +52,7 @@ export default function HeroSection() {
           transition={{ duration: 1.2, ease: 'easeOut' }}
           className="text-4xl md:text-6xl lg:text-7xl font-bold font-lamborghini mb-6 leading-tight"
         >
-          Drive the <span className="text-yellow-400">Future</span>
+          <span className="text-yellow-400">Kelajakni</span> boshqaring
         </motion.h1>
 
         <motion.p
@@ -69,7 +60,7 @@ export default function HeroSection() {
           transition={{ duration: 1.4, ease: 'easeOut' }}
           className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-2xl"
         >
-          Unleash the power of <span className="text-white font-semibold">Lamborghini</span> engineering.
+          <span className="text-white font-semibold">Lamborghini</span> muhandisligining quvvatini his eting.
         </motion.p>
 
         <motion.div
@@ -77,11 +68,11 @@ export default function HeroSection() {
           transition={{ duration: 1.6, ease: 'easeOut' }}
           className="mt-10"
         >
-          <Link href="/models" aria-label="Explore Lamborghini models">
+          <Link href="/models" aria-label="Lamborghini modellari bilan tanishing">
             <button
               className="flex items-center gap-2 px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold rounded-xl transition duration-300 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-yellow-300"
             >
-              Explore Models
+              Modellarni ko‘rish
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

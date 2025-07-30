@@ -5,18 +5,18 @@ import Image from 'next/image';
 
 const features = [
   {
-    title: 'Premium Leather Seats',
-    description: 'Hand-stitched Italian leather provides unmatched comfort and luxury.',
+    title: 'Premium charm teri o‘rindiqlar',
+    description: 'Qo‘lda tikilgan italyan charmidan yasalgan o‘rindiqlar eng yuqori darajadagi qulaylik va hashamatni taqdim etadi.',
     image: '/interior/1.jpg',
   },
   {
-    title: 'Ambient Lighting',
-    description: 'Customizable LED lighting enhances the driving experience.',
+    title: 'Atmosfera yoritilishi',
+    description: 'Moslashtiriladigan LED yoritish sizga boshqaruv zavqini kuchaytiradi.',
     image: '/interior/2.jpg',
   },
   {
-    title: 'Carbon Fiber Trim',
-    description: 'Lightweight, stylish, and race-inspired interior detailing.',
+    title: 'Karbon tolali trim',
+    description: 'Yengil, zamonaviy va poygadan ilhomlangan ichki ko‘rinish uchun karbon tolali bezaklar.',
     image: '/interior/3.jpg',
   },
 ];
@@ -38,7 +38,7 @@ export default function InteriorSection() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          Interior
+          Salon
         </motion.h2>
         <motion.div
           className="w-24 h-1 bg-yellow-400 mx-auto mt-4 rounded-full"
@@ -70,7 +70,7 @@ export default function InteriorSection() {
                 sizes="100vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              {/* Optional dark overlay */}
+              {/* Dark overlay */}
               <div className="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-all" />
             </div>
 
@@ -79,7 +79,9 @@ export default function InteriorSection() {
               <h3 className="text-xl font-semibold text-yellow-400 mb-2 uppercase tracking-wide">
                 {feature.title}
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed">{feature.description}</p>
+              <p className="text-gray-300 text-sm leading-relaxed">
+                {feature.description}
+              </p>
             </div>
           </motion.div>
         ))}

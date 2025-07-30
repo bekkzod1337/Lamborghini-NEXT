@@ -5,23 +5,23 @@ import { Touchpad, Radar, Wifi, SatelliteDish } from 'lucide-react';
 
 const features = [
   {
-    title: 'Touchscreen Infotainment',
-    description: 'Responsive touchscreen with Apple CarPlay, Android Auto, and navigation.',
+    title: 'Sensorli ekranli multimedia tizimi',
+    description: 'Apple CarPlay, Android Auto va navigatsiyaga ega sezgir sensorli boshqaruv.',
     icon: Touchpad,
   },
   {
-    title: 'Advanced Sensors',
-    description: '360° cameras and parking sensors ensure precise maneuvering.',
+    title: 'Ilg‘or sensorlar',
+    description: '360° kameralar va to‘xtash sensori aniq harakatlanishni ta’minlaydi.',
     icon: Radar,
   },
   {
-    title: 'Wireless Connectivity',
-    description: 'Seamless Wi-Fi hotspot and Bluetooth connection for all your devices.',
+    title: 'Simsiz ulanish',
+    description: 'Wi-Fi nuqtasi va barcha qurilmalar uchun Bluetooth ulanishi.',
     icon: Wifi,
   },
   {
-    title: 'Satellite Navigation',
-    description: 'Real-time satellite GPS with live traffic and 3D maps.',
+    title: 'Sun’iy yo‘ldoshli navigatsiya',
+    description: 'Jonli harakat va 3D xaritalar bilan real vaqtli GPS tizimi.',
     icon: SatelliteDish,
   },
 ];
@@ -31,7 +31,7 @@ export default function TechFeatures() {
     <section className="bg-black text-white py-24">
       <div className="max-w-7xl mx-auto px-6 text-center mb-16">
         <h2 className="text-4xl md:text-5xl font-lamborghini uppercase tracking-[0.2em]">
-          Technology
+          Texnologiya
         </h2>
         <div className="w-24 h-1 bg-yellow-400 mx-auto mt-4 rounded-full" />
       </div>
