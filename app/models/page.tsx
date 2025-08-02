@@ -16,7 +16,13 @@ export default function ModelsPage() {
   )
 }
 
-function ModelScrollSection({ model }: { model: any }) {
+type Model = {
+  name: string
+  description: string
+  image: string
+}
+
+function ModelScrollSection({ model }: { model: Model }) {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] })
 

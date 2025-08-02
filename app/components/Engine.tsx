@@ -24,7 +24,7 @@ export default function Engine() {
             <span className="text-white font-semibold">Lamborghini V12</span> dvigateli — bu italyan muhandisligining haqiqiy durdonasi. 
             U <span className="text-yellow-400 font-semibold">770 ot kuchi</span>gacha quvvat yetkazib bera oladi va hayratlanarli tezlanish hamda maksimal tezlikni ta'minlaydi.
             <br /><br />
-            <span className="italic text-white/70">Har bir uzatmani almashtirishda yirtqichning g‘o‘ldirashi qalbingizni larzaga soladi.</span>
+            <span className="italic text-white/70">Har bir uzatmani almashtirishda yirtqichning g'o'ldirashi qalbingizni larzaga soladi.</span>
           </p>
         </motion.div>
 
